@@ -858,7 +858,7 @@ class Kohana_Core {
 	 * @param   object   exception object
 	 * @return  boolean
 	 */
-	public static function exception_handler(Exception $e)
+	public static function exception_handler($e)
 	{
 		try
 		{
@@ -994,7 +994,7 @@ class Kohana_Core {
 	 * @param   object  Exception
 	 * @return  string
 	 */
-	public static function exception_text(Exception $e)
+	public static function exception_text($e)
 	{
 		return sprintf('%s [ %s ]: %s ~ %s [ %d ]',
 			get_class($e), $e->getCode(), strip_tags($e->getMessage()), Kohana::debug_path($e->getFile()), $e->getLine());
